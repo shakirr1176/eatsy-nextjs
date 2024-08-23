@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components{
+  .container {
+    @apply mx-auto px-4;
+  }
+  
+  .font-14{
+    @apply text-sm;
+  }
+  .font-16{
+    @apply text-base;
+  }
+  .font-20{
+    @apply text-base sm:text-lg md:text-xl
+  }
+  .font-28{
+    @apply text-[20px] sm:text-[24px] md:text-[28px]
+  }
+  .font-36{
+    @apply text-lg sm:text-[24px] md:text-[34px]
+  }
+  .font-42{
+    @apply text-[30px] sm:text-[36px] md:text-[42px]
+  }
+}
+
+/* styles/Swiper.module.css */
+.swiper-button-next, .swiper-button-prev {
+  @apply bg-white shadow size-[46px] rounded-full hover:bg-slate-50;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  @apply !text-slate-400;
+  position: absolute;
+  margin-top: -32px;
+}
+.swiper-button-next::after{
+  content: url('../../public/images/svgImage/rightArrow.svg');
+}
+.swiper-button-prev::after{
+  content: url('../../public/images/svgImage/leftArrow.svg');
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  width: 22px; /* Icon width */
+  height: 22px; /* Icon height */
+ 
+}
